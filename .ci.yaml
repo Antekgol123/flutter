@@ -382,7 +382,7 @@ targets:
       - packages/fuchsia_remote_debug_protocol/
       - packages/flutter_test/
       - packages/flutter_goldens/
-      - packages/flutter_tools/lib/src/test/
+      - packages/flutter_tools/
       - bin/
       - .ci.yaml
 
@@ -413,7 +413,7 @@ targets:
       - packages/fuchsia_remote_debug_protocol/
       - packages/flutter_test/
       - packages/flutter_goldens/
-      - packages/flutter_tools/lib/src/test/
+      - packages/flutter_tools/
       - bin/
       - .ci.yaml
 
@@ -439,7 +439,7 @@ targets:
       - packages/fuchsia_remote_debug_protocol/
       - packages/flutter_test/
       - packages/flutter_goldens/
-      - packages/flutter_tools/lib/src/test/
+      - packages/flutter_tools/
       - bin/
       - .ci.yaml
 
@@ -2231,7 +2231,6 @@ targets:
     scheduler: luci
 
   - name: Linux_android opacity_peephole_one_rect_perf__e2e_summary
-    bringup: true # Flaky https://github.com/flutter/flutter/issues/95574
     recipe: devicelab/devicelab_drone
     presubmit: false
     timeout: 60
@@ -2242,7 +2241,6 @@ targets:
     scheduler: luci
 
   - name: Linux_android opacity_peephole_col_of_rows_perf__e2e_summary
-    bringup: true # Flaky https://github.com/flutter/flutter/issues/96072
     recipe: devicelab/devicelab_drone
     presubmit: false
     timeout: 60
@@ -2253,7 +2251,6 @@ targets:
     scheduler: luci
 
   - name: Linux_android opacity_peephole_opacity_of_grid_perf__e2e_summary
-    bringup: true # Flaky https://github.com/flutter/flutter/issues/95865
     recipe: devicelab/devicelab_drone
     presubmit: false
     timeout: 60
@@ -2264,7 +2261,6 @@ targets:
     scheduler: luci
 
   - name: Linux_android opacity_peephole_grid_of_opacity_perf__e2e_summary
-    bringup: true # Flaky https://github.com/flutter/flutter/issues/95859
     recipe: devicelab/devicelab_drone
     presubmit: false
     timeout: 60
@@ -2275,7 +2271,6 @@ targets:
     scheduler: luci
 
   - name: Linux_android opacity_peephole_fade_transition_text_perf__e2e_summary
-    bringup: true # Flaky https://github.com/flutter/flutter/issues/95863
     recipe: devicelab/devicelab_drone
     presubmit: false
     timeout: 60
@@ -2283,6 +2278,26 @@ targets:
       tags: >
         ["devicelab","android","linux"]
       task_name: opacity_peephole_fade_transition_text_perf__e2e_summary
+    scheduler: luci
+
+  - name: Linux_android opacity_peephole_grid_of_alpha_savelayers_perf__e2e_summary
+    recipe: devicelab/devicelab_drone
+    presubmit: false
+    timeout: 60
+    properties:
+      tags: >
+        ["devicelab","android","linux"]
+      task_name: opacity_peephole_grid_of_alpha_savelayers_perf__e2e_summary
+    scheduler: luci
+
+  - name: Linux_android opacity_peephole_col_of_alpha_savelayer_rows_perf__e2e_summary
+    recipe: devicelab/devicelab_drone
+    presubmit: false
+    timeout: 60
+    properties:
+      tags: >
+        ["devicelab","android","linux"]
+      task_name: opacity_peephole_col_of_alpha_savelayer_rows_perf__e2e_summary
     scheduler: luci
 
   - name: Mac build_aar_module_test
@@ -2472,7 +2487,7 @@ targets:
       - packages/fuchsia_remote_debug_protocol/**
       - packages/flutter_test/**
       - packages/flutter_goldens/**
-      - packages/flutter_tools/lib/src/test/**
+      - packages/flutter_tools/**
       - bin/**
       - .ci.yaml
 
@@ -2502,7 +2517,7 @@ targets:
       - packages/fuchsia_remote_debug_protocol/**
       - packages/flutter_test/**
       - packages/flutter_goldens/**
-      - packages/flutter_tools/lib/src/test/**
+      - packages/flutter_tools/**
       - bin/**
       - .ci.yaml
 
@@ -2528,7 +2543,7 @@ targets:
       - packages/fuchsia_remote_debug_protocol/**
       - packages/flutter_test/**
       - packages/flutter_goldens/**
-      - packages/flutter_tools/lib/src/test/**
+      - packages/flutter_tools/**
       - bin/**
       - .ci.yaml
 
@@ -2680,7 +2695,6 @@ targets:
       - .ci.yaml
 
   - name: Mac module_test_ios
-    bringup: true # Flaky https://github.com/flutter/flutter/issues/96075
     recipe: devicelab/devicelab_drone
     timeout: 60
     properties:
@@ -2824,6 +2838,7 @@ targets:
       subshard: "1_4"
       tags: >
         ["framework","hostonly","shard"]
+      test_timeout_secs: "2700"
     scheduler: luci
     runIf:
       - dev/**
@@ -2849,6 +2864,7 @@ targets:
       subshard: "2_4"
       tags: >
         ["framework","hostonly","shard"]
+      test_timeout_secs: "2700"
     scheduler: luci
     runIf:
       - dev/**
@@ -2874,6 +2890,7 @@ targets:
       subshard: "3_4"
       tags: >
         ["framework","hostonly","shard"]
+      test_timeout_secs: "2700"
     scheduler: luci
     runIf:
       - dev/**
@@ -2899,6 +2916,7 @@ targets:
       subshard: "4_4"
       tags: >
         ["framework","hostonly","shard"]
+      test_timeout_secs: "2700"
     scheduler: luci
     runIf:
       - dev/**
@@ -3641,7 +3659,7 @@ targets:
       - packages/fuchsia_remote_debug_protocol/
       - packages/flutter_test/
       - packages/flutter_goldens/
-      - packages/flutter_tools/lib/src/test/
+      - packages/flutter_tools/
       - bin/
       - .ci.yaml
 
@@ -3670,7 +3688,7 @@ targets:
       - packages/fuchsia_remote_debug_protocol/
       - packages/flutter_test/
       - packages/flutter_goldens/
-      - packages/flutter_tools/lib/src/test/
+      - packages/flutter_tools/
       - bin/
       - .ci.yaml
 
@@ -3696,7 +3714,7 @@ targets:
       - packages/fuchsia_remote_debug_protocol/
       - packages/flutter_test/
       - packages/flutter_goldens/
-      - packages/flutter_tools/lib/src/test/
+      - packages/flutter_tools/
       - bin/
       - .ci.yaml
 
@@ -3919,6 +3937,7 @@ targets:
       subshard: "1_6"
       tags: >
         ["framework","hostonly","shard"]
+      test_timeout_secs: "2700"
     scheduler: luci
     runIf:
       - dev/**
@@ -3943,6 +3962,7 @@ targets:
       subshard: "2_6"
       tags: >
         ["framework","hostonly","shard"]
+      test_timeout_secs: "2700"
     scheduler: luci
     runIf:
       - dev/**
@@ -3967,6 +3987,7 @@ targets:
       subshard: "3_6"
       tags: >
         ["framework","hostonly","shard"]
+      test_timeout_secs: "2700"
     scheduler: luci
     runIf:
       - dev/**
@@ -3991,6 +4012,7 @@ targets:
       subshard: "4_6"
       tags: >
         ["framework","hostonly","shard"]
+      test_timeout_secs: "2700"
     scheduler: luci
     runIf:
       - dev/**
@@ -4015,6 +4037,7 @@ targets:
       subshard: "5_6"
       tags: >
         ["framework","hostonly","shard"]
+      test_timeout_secs: "2700"
     scheduler: luci
     runIf:
       - dev/**
@@ -4039,6 +4062,7 @@ targets:
       subshard: "6_6"
       tags: >
         ["framework","hostonly","shard"]
+      test_timeout_secs: "2700"
     scheduler: luci
     runIf:
       - dev/**
@@ -4188,3 +4212,11 @@ targets:
         ["devicelab","android","windows"]
       task_name: windows_chrome_dev_mode
     scheduler: luci
+
+  - name: google_test
+    bringup: true
+    presubmit: false
+    scheduler: google_internal
+    properties:
+      tags: >
+          ["framework","hostonly","shard"]
